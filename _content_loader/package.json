@@ -1,0 +1,22 @@
+{
+  "name": "content_loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "loader": "ts-node ./src/index.ts",
+    "dev": "nodemon --watch src --exec 'ts-node' src/image-parser.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^5.5.0",
+    "nodemon": "^2.0.6",
+    "yaml": "^1.10.0"
+  }
+}

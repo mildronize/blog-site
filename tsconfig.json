@@ -14,6 +14,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules","_content_loader"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
