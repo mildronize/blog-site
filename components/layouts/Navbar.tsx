@@ -1,18 +1,10 @@
 const Navbar = () => {
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="font-heading text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        mildronize
-        </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        A statically generated blog example using{' '}
-        <a
-          href="https://nextjs.org/"
-          className="underline hover:text-success duration-200 transition-colors"
-        >
-          Next.js
-        </a>{' '}
-        and 
+    <section className="flex-col md:flex-row flex items-center md:justify-between mt-4 mb-16 md:mb-12">
+      
+      <img className="w-7" src="/icons/icon.png" />
+      <h4 className="text-center md:text-left text-sm md:mt-0 mt-4 md:pl-8">
+  Home {' '} About {' '} Project {' '} Github
       </h4>
     </section>
   )
