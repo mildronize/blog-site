@@ -1,4 +1,5 @@
 import Container from '../components/layouts/container'
+import Navbar from '../components/layouts/Navbar';
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
@@ -22,7 +23,7 @@ const Index = ({ allPosts }: Props) => {
           <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
         <Container>
-          <Intro />
+          <Navbar />
         </Container>
       </Layout>
     </>
