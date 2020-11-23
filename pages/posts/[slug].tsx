@@ -7,7 +7,6 @@ import Navbar from '../../components/layouts/Navbar'
 import PostHeader from '../../components/post-header'
 import Layout from '../../components/layouts/layout'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
-import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
@@ -38,7 +37,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
       <Navbar isShow={hideOnScroll} />
       <Container>
         {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
+          <div>Loading…</div>
         ) : (
           <>
             <article className="mb-32">
@@ -52,7 +51,6 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
-                author={post.author}
               />
               <PostBody content={post.content} />
             </article>

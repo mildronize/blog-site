@@ -12,8 +12,7 @@ module.exports = {
       },
       spacing: {
         28: "7rem",
-        
-        "vscreen-85": "85vh"
+        "vscreen-60": "60vh"
       },
       letterSpacing: {
         tighter: "-.04em",

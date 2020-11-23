@@ -34,7 +34,10 @@ const PostPreview = ({
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
         </div>
         <div className="m-5  w-5/6">
-          <CoverImage slug={slug} title={title} src={coverImage} />
+          {coverImage &&
+            <CoverImage slug={slug} title={title} src={coverImage} />
+          }
+
         </div>
       </div>
     </div>
