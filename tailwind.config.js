@@ -12,6 +12,8 @@ module.exports = {
       },
       spacing: {
         28: "7rem",
+        
+        "vscreen-85": "85vh"
       },
       letterSpacing: {
         tighter: "-.04em",
@@ -43,7 +45,7 @@ module.exports = {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
-        body: [
+        sans: [
           "Montserrat", "Bai Jamjuree",
           "ui-sans-serif",
           "system-ui",
@@ -60,7 +62,26 @@ module.exports = {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
+        hero: [
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          '"Segoe UI"',
+          "Roboto",
+          '"Helvetica Neue"',
+          "Arial",
+          '"Noto Sans"',
+          "sans-serif",
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
       },
+      backgroundImage: theme => ({
+        // 'hero-landing': "url('/assets/cover.jpg')",
+       }),
     },
   },
   variants: {

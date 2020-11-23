@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router'
+import { useState } from 'react';
 import ErrorPage from 'next/error'
 import Container from '../../components/layouts/container'
 import PostBody from '../../components/post-body'
-import Header from '../../components/layouts/header'
+import Navbar from '../../components/layouts/Navbar'
 import PostHeader from '../../components/post-header'
 import Layout from '../../components/layouts/layout'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
@@ -11,6 +12,7 @@ import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
 import PostType from '../../types/post'
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 type Props = {
   post: PostType
@@ -20,13 +22,21 @@ type Props = {
 
 const Post = ({ post, morePosts, preview }: Props) => {
   const router = useRouter()
+
+  const [hideOnScroll, setHideOnScroll] = useState(true);
+  useScrollPosition(({ prevPos, currPos }) => {
+    const isShow = currPos.y > prevPos.y
+    console.log(hideOnScroll);
+    if (isShow !== hideOnScroll) setHideOnScroll(isShow)
+  }, [hideOnScroll])
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
   return (
     <Layout preview={preview}>
+      <Navbar isShow={hideOnScroll} />
       <Container>
-        <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (

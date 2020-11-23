@@ -8,6 +8,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@n8tb1t/use-scroll-position": "^2.0.3",
     "classnames": "2.2.6",
     "date-fns": "2.16.1",
     "firebase-admin": "^9.4.1",
