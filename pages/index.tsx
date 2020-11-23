@@ -26,7 +26,7 @@ const Index = ({ allPosts }: Props) => {
   useScrollPosition(({ prevPos, currPos }) => {
     // const isShow = currPos.y > prevPos.y
     // console.log(prevPos.y, currPos.y)
-    const isShow = prevPos.y < -500;
+    const isShow = prevPos.y < -450;
     console.log(hideOnScroll);
     if (isShow !== hideOnScroll) setHideOnScroll(isShow)
   }, [hideOnScroll])

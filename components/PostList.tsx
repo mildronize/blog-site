@@ -11,7 +11,7 @@ const PostList = ({ posts }: Props) => {
       <h2 className="my-8 text-3xl md:text-4xl font-bold tracking-tighter leading-tight">
         Latest Posts
       </h2>
-      <hr className="mb-16" />
+      <hr className="border-accent-2 mb-16" />
       <div className="grid grid-cols-1 gap-10">
         {posts.map((post) => (
           <PostPreview
